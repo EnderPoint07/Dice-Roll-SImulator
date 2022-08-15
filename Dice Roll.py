@@ -26,22 +26,22 @@ def resource_path(relative_path):
 def match(dice: int):
     match dice:
         case 1:
-            path = resource_path('images/Dice-1.png')
+            path = resource_path('Images/Dice-1.png')
             return path
         case 2:
-            path = resource_path('images/Dice-2.png')
+            path = resource_path('Images/Dice-2.png')
             return path
         case 3:
-            path = resource_path('images/Dice-3.png')
+            path = resource_path('Images/Dice-3.png')
             return path
         case 4:
-            path = resource_path('images/Dice-4.png')
+            path = resource_path('Images/Dice-4.png')
             return path
         case 5:
-            path = resource_path('images/Dice-5.png')
+            path = resource_path('Images/Dice-5.png')
             return path
         case 6:
-            path = resource_path('images/Dice-6.png')
+            path = resource_path('Images/Dice-6.png')
             return path
         case default:
             return "not working"
@@ -77,5 +77,5 @@ while True:
     elif event == WIN_CLOSED:
         break
 
-# End program if user closes window or
+# End program if user closes window
 window.close()
