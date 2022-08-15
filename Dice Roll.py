@@ -7,7 +7,6 @@ def roll(output):
     output = random.randrange(1, 7)
     return output
 
-
 # Variables
 result = 0
 
