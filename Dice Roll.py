@@ -11,21 +11,38 @@ def roll(output):
     return output
 
 
+def resource_path(relative_path):
+    """ Get absolute path to resource, works for dev and for PyInstaller """
+    try:
+        # PyInstaller creates a temp folder and stores path in _MEIPASS
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+
+    return os.path.join(base_path, relative_path)
+
+
 # The func to match the dice roll with the image path
 def match(dice: int):
     match dice:
         case 1:
-            return "Dice-1.png"
+            path = resource_path('images/Dice-1.png')
+            return path
         case 2:
-            return "Dice-2.png"
+            path = resource_path('images/Dice-2.png')
+            return path
         case 3:
-            return "Dice-3.png"
+            path = resource_path('images/Dice-3.png')
+            return path
         case 4:
-            return "Dice-4.png"
+            path = resource_path('images/Dice-4.png')
+            return path
         case 5:
-            return "Dice-5.png"
+            path = resource_path('images/Dice-5.png')
+            return path
         case 6:
-            return "Dice-6.png"
+            path = resource_path('images/Dice-6.png')
+            return path
         case default:
             return "not working"
 
